@@ -134,7 +134,9 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
   # Red prompt symbol if the last command failed.
   typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_FOREGROUND=red
   # Prompt symbol: bold arrow.
-  typeset -g POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION='%B➜ '
+  typeset -g POWERLEVEL9K_PROMPT_CHAR_CONTENT_EXPANSION='%B$ '
+  # typeset -g POWERLEVEL9K_PROMPT_CHAR_OK_{VIINS,VICMD,VIVIS}_CONTENT_EXPANSION=':D'
+  # typeset -g POWERLEVEL9K_PROMPT_CHAR_ERROR_{VIINS,VICMD,VIVIS}_CONTENT_EXPANSION=':('
 
   # Cyan current directory.
   typeset -g POWERLEVEL9K_DIR_FOREGROUND=cyan
