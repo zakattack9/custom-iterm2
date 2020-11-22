@@ -18,10 +18,8 @@
 [[ ! -o 'no_brace_expand' ]] || p10k_config_opts+=('no_brace_expand')
 'builtin' 'setopt' 'no_aliases' 'no_sh_glob' 'brace_expand'
 
-function prompt_cpu_temp() {
-
-  p10k segment -f red -t "$(osx-cpu-temp -F)"
-}
+# custom function used to get cpu temp and display as powerlevel10k segment
+function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
 
 () {
   emulate -L zsh -o extended_glob
@@ -234,6 +232,7 @@ function prompt_cpu_temp() {
   #   P9K_WIFI_NOISE        | noise in dBm, from -120 to 0
   #   P9K_WIFI_BARS         | signal strength in bars, from 0 to 4 (derived from P9K_WIFI_RSSI and P9K_WIFI_NOISE)
 
+  #####################################[ misc ]#####################################
   # Instant prompt mode.
   #
   #   - off:     Disable instant prompt. Choose this if you've tried instant prompt and found
