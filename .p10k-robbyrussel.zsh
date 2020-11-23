@@ -42,11 +42,11 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
   # automatically hidden when the input line reaches it. Right prompt above the
   # last prompt line gets hidden if it would overlap with left prompt.
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
-    background_jobs         # presence of background jobs
-    command_execution_time  # duration of the last command
-    wifi                    # wifi speed
-    cpu_temp                # runs custom funciton to get cpu temp (uses https://formulae.brew.sh/formula/osx-cpu-temp)
-    public_ip               # public IP address
+    background_jobs           # presence of background jobs
+    command_execution_time    # duration of the last command
+    wifi                      # wifi speed
+    cpu_temp                  # runs custom funciton to get cpu temp (uses https://formulae.brew.sh/formula/osx-cpu-temp)
+    public_ip                 # public IP address
     # status                  # exit code of the last command
     # direnv                  # direnv status (https://direnv.net/)
     # asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
@@ -92,7 +92,7 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
     # disk_usage              # disk usage
     # ram                     # free RAM
     # swap                    # used swap
-    #todo                     # todo items (https://github.com/todotxt/todo.txt-cli)
+    # todo                    # todo items (https://github.com/todotxt/todo.txt-cli)
     # timewarrior             # timewarrior tracking status (https://timewarrior.net/)
     # taskwarrior             # taskwarrior task count (https://taskwarrior.org/)
     # time                    # current time
