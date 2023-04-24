@@ -44,15 +44,15 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
   typeset -g POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(
     background_jobs           # presence of background jobs
     command_execution_time    # duration of the last command
-    wifi                      # wifi speed
-    cpu_temp                  # runs custom funciton to get cpu temp (uses https://formulae.brew.sh/formula/osx-cpu-temp)
-    public_ip                 # public IP address
+    # wifi                      # wifi speed
+    # cpu_temp                  # runs custom funciton to get cpu temp (uses https://formulae.brew.sh/formula/osx-cpu-temp)
+    # public_ip                 # public IP address
     # status                  # exit code of the last command
     # direnv                  # direnv status (https://direnv.net/)
     # asdf                    # asdf version manager (https://github.com/asdf-vm/asdf)
     # virtualenv              # python virtual environment (https://docs.python.org/3/library/venv.html)
     # anaconda                # conda environment (https://conda.io/)
-    # pyenv                   # python environment (https://github.com/pyenv/pyenv)
+    pyenv                   # python environment (https://github.com/pyenv/pyenv)
     # goenv                   # go environment (https://github.com/syndbg/goenv)
     # nodenv                  # node.js version from nodenv (https://github.com/nodenv/nodenv)
     # nvm                     # node.js version from nvm (https://github.com/nvm-sh/nvm)
@@ -195,7 +195,7 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
 
   ###############################[ public_ip: public IP address ]###############################
   # Public IP color.
-  typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=yellow
+  # typeset -g POWERLEVEL9K_PUBLIC_IP_FOREGROUND=yellow
   # Custom icon.
   # typeset -g POWERLEVEL9K_PUBLIC_IP_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -210,7 +210,7 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
 
   #####################################[ wifi: wifi speed ]#####################################
   # WiFi color.
-  typeset -g POWERLEVEL9K_WIFI_FOREGROUND=magenta
+  # typeset -g POWERLEVEL9K_WIFI_FOREGROUND=magenta
   # Custom icon.
   # typeset -g POWERLEVEL9K_WIFI_VISUAL_IDENTIFIER_EXPANSION='⭐'
 
@@ -234,6 +234,7 @@ function prompt_cpu_temp() { p10k segment -f red -t "$(osx-cpu-temp -F)" }
   #   P9K_WIFI_NOISE        | noise in dBm, from -120 to 0
   #   P9K_WIFI_BARS         | signal strength in bars, from 0 to 4 (derived from P9K_WIFI_RSSI and P9K_WIFI_NOISE)
 
+  typeset -g POWERLEVEL9K_PYENV_FOREGROUND=yellow
   #####################################[ misc ]#####################################
   # Instant prompt mode.
   #
